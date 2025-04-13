@@ -32,6 +32,21 @@
     background: var(--primary-light);
     border-radius: 50%;
     box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.network-loader .node::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--primary-light);
+    filter: blur(5px);
+    animation: pulse 2s infinite;
 }
 
 .network-loader .node:nth-child(1) {
@@ -74,8 +89,13 @@
     left: 50%;
     width: 100px;
     height: 2px;
-    background: linear-gradient(90deg, rgba(99, 102, 241, 0.2), rgba(99, 102, 241, 1));
+    background: linear-gradient(90deg, 
+        rgba(99, 102, 241, 0.2),
+        rgba(99, 102, 241, 1),
+        rgba(99, 102, 241, 0.2)
+    );
     transform-origin: left center;
+    filter: drop-shadow(0 0 2px var(--primary-color));
 }
 
 .network-loader .connection:nth-child(6) {
@@ -156,7 +176,6 @@
     }
 }
 
-/* Animation for cards */
 .animate-fade-in {
     animation: fadeIn 0.8s ease forwards;
     opacity: 0;
@@ -201,7 +220,6 @@
     }
 }
 
-/* Animation delay classes */
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
@@ -211,7 +229,6 @@
 .delay-700 { animation-delay: 700ms; }
 .delay-800 { animation-delay: 800ms; }
 
-/* Scroll reveal animations */
 .fade-up {
     opacity: 0;
     transform: translateY(40px);
