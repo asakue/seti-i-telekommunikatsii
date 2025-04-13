@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             content: {
                 details: "В данной лабораторной работе вы познакомитесь с интерфейсом Cisco Packet Tracer",
                 tasks: [
-                    
+
 "1. Для чего используется режим симуляции? ",
 "2. Как просмотреть прохождение пакета по уровням модели OSI? ",
 "3. Можно ли определить причину того, что посланный в режиме симуляции пакет не дошел до адресата и на каком этапе произошел сбой работы сети? ",
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 "7. Как в режиме симуляции проследить изменение содержимого пакета при прохождении его по сети? ",
 "8. Перечислите основные возможности режима симуляции. ."
                 ],
-                
+
             }
         },
         {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 "6. Создание ping-запроса на несуществующий IP-адрес узла.", 
 "7. Выполнение индивидуального задания. "
                 ],
-                
+
             }
         },
         {
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 "10. Продемонстрируйте настройку служба FTP в Cisco Packet Tracer. ",
 "11. Продемонстрируйте настройку WEB-сервера в Cisco Packet Tracer."
                 ],
-                
+
             }
         },
         {
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 "2. Подключить к настроенной сети дополнительное оборудование и создать вторую сеть.  ",
 "3. В режиме симуляции проверить прохождение пакетов в объединенной сети."
                 ],
-                
+
             }
         },
         {
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
 "4. Чем отличаются интерфейсы командной строки маршрутизатора и коммутатора компании Cisco? ",
 "5. Перечислите основные функции маршрутизатора в соответствии с уровнями модели OSI."
                 ],
-                
+
             }
         },
         {
@@ -144,9 +144,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 details: "Лабораторная работа посвящена изучению командам ОС Cisco IOS.",
                 tasks: [
                     "Для защиты нужно просто повводить команды",
-                   
+
                 ],
-                
+
             }
         },
         {
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "2. Проверьте связь между компьютерами Comp1 и Comp3 с помощью команд ping и tracert при включенном и выключенном пятом маршрутизаторе. ",
                     "3. Проверьте связь между компьютерами ПК0 и Comp1 с помощью команд ping и tracert при включенном и выключенном втором маршрутизаторе. "
                 ],
-                
+
             }
         },
         {
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 tasks: [
                     "Не готова"
                 ],
-                
+
             }
         },
         // ЛАБ 9
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 tasks: [
                     "Не готова"
                 ],
-                
+
             }
         },
         // ЛАБ 10
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 tasks: [
                     "Не готова"
                 ],
-               
+
             }
         },
         // ЛАБ 11
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 tasks: [
                     "Не готова"
                 ],
-                
+
             }
         },
         // ЛАБ 12
@@ -254,79 +254,75 @@ document.addEventListener('DOMContentLoaded', function() {
                 tasks: [
                     "Не готова"
                 ],
-                
+
             }
         },
         // ЛАБ 13
         {
             id: 13,
-            number: "Беспроводные сети 1",
+            number: "Б. с. 1",
             title: "что-то там ",
             description: "Не готова",
             difficulty: "advanced",
-            icon: "fas fa-server",
-            tags: ["Продвинутый", "Виртуализация"],
+            icon: "fas fa-broadcast-tower", 
+            tags: ["Продвинутый", "Беспроводные сети"],
             category: "advanced",
             content: {
                 details: "Не готова",
                 tasks: [
                     "Не готова"
                 ],
-                
+
             }
         },
         // ЛАБ 14
         {
             id: 14,
-            number: "Беспроводные сети 2",
+            number: "Б. с. 2",
             title: "тря ля ля",
             description: "Не готова",
             difficulty: "advanced",
-            icon: "fas fa-cloud",
-            tags: ["Продвинутый", "Виртуализация"],
+            icon: "fas fa-broadcast-tower", 
+            tags: ["Продвинутый", "Беспроводные сети"],
             category: "advanced",
             content: {
                 details: "Не готова",
                 tasks: [
                     "Не готова"
                 ],
-                
+
             }
         },
         // ЛАБ 15
         {
             id: 15,
-            number: "Беспроводные сети 3",
+            number: "Б. с. 3",
             title: "бла бла бла",
             description: "Не готова",
             difficulty: "intermediate",
-            icon: "fas fa-tachometer-alt",
-            tags: ["Средний", "Мониторинг"],
+            icon: "fas fa-wifi",
+            tags: ["Средний", "Беспроводные сети"],
             category: "intermediate",
             content: {
                 details: "Не готова",
                 tasks: [
                     "Не готова"
                 ],
-                
+
             }
         }
     ];
-    
-    // Function to render labs
     function renderLabs(labs) {
         const labsGrid = document.getElementById('labs-grid');
-        
+
         if (!labsGrid) return;
-        
+
         labsGrid.innerHTML = '';
-        
+
         labs.forEach(lab => {
             const labCard = document.createElement('div');
             labCard.className = 'lab-card';
             labCard.dataset.category = lab.category;
-            
-            // Create difficulty dots
             let difficultyDots = '';
             if (lab.difficulty === 'basic') {
                 difficultyDots = `
@@ -353,7 +349,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
             }
-            
+
             labCard.innerHTML = `
                 <div class="lab-header">
                     <span class="lab-number">${lab.number}</span>
@@ -370,10 +366,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
             `;
-            
+
             labsGrid.appendChild(labCard);
         });
-        
+
         document.querySelectorAll('.open-lab').forEach(button => {
             button.addEventListener('click', function() {
                 const labId = parseInt(this.getAttribute('data-id'));
@@ -381,21 +377,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
+
     function openLabModal(labId) {
         const lab = labsData.find(lab => lab.id === labId);
-        
+
         if (!lab) return;
-        
+
         const modal = document.getElementById('lab-modal');
         const modalTitle = document.getElementById('modal-title');
         const modalNumber = document.getElementById('modal-number');
         const modalBody = document.getElementById('modal-body');
         const modalDownload = document.getElementById('modal-download');
-        
+
         modalTitle.textContent = lab.title;
         modalNumber.textContent = lab.number;
-        
+
         modalBody.innerHTML = `
             <div class="lab-details">
                 <h3>Описание</h3>
@@ -407,16 +403,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     ${lab.content.tasks.map(task => `<li>${task}</li>`).join('')}
                 </ul>
             </div>
-            
+
         `;
-        
+
         modalDownload.href = `lab_files/lab_${lab.id}.zip`;
-        
+
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
-    
-    
+
+
     renderLabs(labsData);
 });
 //разделение на сложность и другие функции от части реализованы но не работают и не хочу 4тобы работали
