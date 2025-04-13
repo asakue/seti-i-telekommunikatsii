@@ -1,0 +1,255 @@
+/* анимации */
+/*короче всё сделано через жопу и мне не нравится но мне всёравно*/
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.7s ease;
+}
+
+.loader-container.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.network-loader {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.network-loader .node {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--primary-light);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+}
+
+.network-loader .node:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 25px;
+    height: 25px;
+    animation: pulse 1.5s infinite;
+}
+
+.network-loader .node:nth-child(2) {
+    top: 20%;
+    left: 20%;
+    animation: moveNode 3s infinite alternate;
+}
+
+.network-loader .node:nth-child(3) {
+    top: 20%;
+    right: 20%;
+    animation: moveNode 2.5s infinite alternate-reverse;
+}
+
+.network-loader .node:nth-child(4) {
+    bottom: 20%;
+    left: 20%;
+    animation: moveNode 4s infinite alternate;
+}
+
+.network-loader .node:nth-child(5) {
+    bottom: 20%;
+    right: 20%;
+    animation: moveNode 3.5s infinite alternate-reverse;
+}
+
+.network-loader .connection {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.2), rgba(99, 102, 241, 1));
+    transform-origin: left center;
+}
+
+.network-loader .connection:nth-child(6) {
+    transform: rotate(45deg);
+    animation: pulse-line 1s infinite alternate;
+}
+
+.network-loader .connection:nth-child(7) {
+    transform: rotate(135deg);
+    animation: pulse-line 1.2s infinite alternate;
+}
+
+.network-loader .connection:nth-child(8) {
+    transform: rotate(225deg);
+    animation: pulse-line 1.4s infinite alternate;
+}
+
+.network-loader .connection:nth-child(9) {
+    transform: rotate(315deg);
+    animation: pulse-line 1.6s infinite alternate;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        box-shadow: 0 0 30px var(--primary-color), 0 0 50px var(--primary-color);
+    }
+}
+
+@keyframes moveNode {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, 10px);
+    }
+    100% {
+        transform: translate(-10px, -10px);
+    }
+}
+
+@keyframes pulse-line {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes moveBg {
+    from {
+        background-position: 0 0, 25px 25px;
+    }
+    to {
+        background-position: 1000px 0, 1025px 25px;
+    }
+}
+
+@keyframes flowUp {
+    0% {
+        transform: translateY(0) scaleY(1);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.8;
+    }
+    95% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) scaleY(1.5);
+        opacity: 0;
+    }
+}
+
+/* Animation for cards */
+.animate-fade-in {
+    animation: fadeIn 0.8s ease forwards;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.animate-fade-in::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.3), 
+        transparent);
+    transform: translateX(-100%);
+    animation: shimmerEffect 1.5s 0.5s infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmerEffect {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Animation delay classes */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+
+/* Scroll reveal animations */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}

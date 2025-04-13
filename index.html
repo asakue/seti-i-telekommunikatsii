@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВИС11 | Сети и телекоммуникации</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- лоадер епт -->
+    <div class="loader-container" id="loader">
+        <div class="network-loader">
+            <div class="node"></div>
+            <div class="node"></div>
+            <div class="node"></div>
+            <div class="node"></div>
+            <div class="node"></div>
+            <div class="connection"></div>
+            <div class="connection"></div>
+            <div class="connection"></div>
+            <div class="connection"></div>
+        </div>
+    </div>
+
+    <!-- хедер май литл понииии -->
+    <header>
+        <div class="header-bg">
+            <div class="network-grid"></div>
+            <div class="connections" id="connections"></div>
+        </div>
+        <div class="header-content">
+            <h3 class="header-subtitle">ВИС11</h3>
+            <h1 class="header-title">Сети и телекоммуникации</h1>
+            <p class="header-description">ПоКа 7 ЛаБ</p>
+        </div>
+        <div class="wave"></div>
+    </header>
+
+    <!-- тут мейн у меня  -->
+    <main class="main-content">
+        <section id="labs" class="labs-section">
+            <h2 class="section-title">Лабораторные работы</h2>
+
+            <div class="labs-grid" id="labs-grid">
+                <!-- да ебать я умни лабы с джеес загружать буду -->
+            </div>
+        </section>
+
+        <!-- а тут нет ничего -->
+
+
+    </main>
+
+    <!-- футер -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>ВИС11</h2>
+                <p>Сети и телекоммуникации</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="https://github.com/asakue" class="developer-link">
+                <i class="fab fa-github"></i> by asakue
+            </a>
+        </div>
+    </footer>
+
+    <!-- кнопочка назат -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- модал -->
+    <div class="modal" id="lab-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <span id="modal-number" class="lab-number"></span>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- контент тута -->
+            </div>
+            <div class="modal-footer">
+                <a href="https://avatars.dzeninfra.ru/get-zen_doc/175411/pub_61195ae25be0d94cdf5357af_61195e4a34e49528bbee7b46/scale_1200" class="btn btn-secondary" id="modal-download">Нажми так нежно на меня</a>
+                <button class="btn btn-primary modal-close-btn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/labs.js"></script>
+</body>
+</html>
+
+
